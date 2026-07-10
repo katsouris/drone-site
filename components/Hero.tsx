@@ -1,5 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import heroImage from '@/homepage.JPG';
+import heroImage800 from '@/images/optimized/homepage-800.webp';
+import heroImage1280 from '@/images/optimized/homepage-1280.webp';
+import heroImage1920 from '@/images/optimized/homepage-1920.webp';
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -16,7 +18,9 @@ export default function Hero() {
         style={{ y: imageY }}
       >
         <img
-          src={heroImage}
+          src={heroImage1920}
+          srcSet={`${heroImage800} 800w, ${heroImage1280} 1280w, ${heroImage1920} 1920w`}
+          sizes='100vw'
           alt='Εναέρια λήψη ελληνικού τοπίου'
           className='h-full w-full object-cover'
         />
