@@ -1,9 +1,6 @@
-"use client";
-
 import { projects } from "@/data/projects";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -54,7 +51,7 @@ export default function HorizontalProjects() {
       <div ref={trackRef} className="project-track mt-14 flex w-max gap-6 px-5 md:px-8">
         {projects.map((project) => (
           <article key={`horizontal-${project.title}`} className="relative h-[62vh] w-[82vw] shrink-0 overflow-hidden bg-[#111] md:w-[58vw]">
-            <Image src={project.image} alt={`Οριζόντια παρουσίαση ${project.title}`} fill className="object-cover" sizes="80vw" />
+            <img src={project.image} alt={`Οριζόντια παρουσίαση ${project.title}`} className="absolute inset-0 h-full w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#050607]/92 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 max-w-2xl p-6 md:p-9">
               <span className="mb-6 block text-sm text-[#17d7d0]">{project.number}</span>

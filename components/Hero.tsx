@@ -1,7 +1,4 @@
-'use client';
-
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Image from 'next/image';
 import heroImage from '@/homepage.JPG';
 
 export default function Hero() {
@@ -18,13 +15,10 @@ export default function Hero() {
         className='absolute inset-0 bg-[#050607]'
         style={{ y: imageY }}
       >
-        <Image
+        <img
           src={heroImage}
           alt='Εναέρια λήψη ελληνικού τοπίου'
-          fill
-          priority
-          className='object-cover'
-          sizes='100vw'
+          className='h-full w-full object-cover'
         />
       </motion.div>
       <div className='absolute inset-0 bg-gradient-to-b from-[#050607]/45 via-[#050607]/25 to-[#050607]' />

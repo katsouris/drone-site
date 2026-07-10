@@ -1,5 +1,3 @@
-"use client";
-
 import Lenis from "lenis";
 import { ReactNode, useEffect } from "react";
 

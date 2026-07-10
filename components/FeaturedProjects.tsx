@@ -1,8 +1,5 @@
-"use client";
-
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function FeaturedProjects() {
   return (
@@ -30,12 +27,10 @@ export default function FeaturedProjects() {
               viewport={{ once: true, amount: 0.24 }}
               transition={{ duration: 0.7, delay: index * 0.06 }}
             >
-              <Image
+              <img
                 src={project.image}
                 alt={`Drone έργο ${project.title}`}
-                fill
-                className="object-cover transition duration-700 group-hover:scale-110"
-                sizes="(min-width: 768px) 50vw, 100vw"
+                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050607] via-[#050607]/20 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">

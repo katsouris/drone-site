@@ -1,5 +1,3 @@
-"use client";
-
 import { services } from "@/data/projects";
 import { motion } from "framer-motion";
 
