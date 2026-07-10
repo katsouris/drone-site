@@ -7,10 +7,10 @@ export default function Services() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 grid gap-6 md:grid-cols-[0.7fr_1fr] md:items-end">
           <h2 className="font-[var(--font-manrope)] text-[clamp(3.2rem,8vw,8rem)] font-extrabold uppercase leading-[0.86]">
-            Υπηρεσίες
+            Τρόποι αφήγησης
           </h2>
           <p className="max-w-xl text-lg leading-8 text-[#071012]/68">
-            Από μεμονωμένες λήψεις μέχρι ολοκληρωμένα μικρά films, το υλικό οργανώνεται για χρήση σε web, social, τουριστική προβολή και παρουσίαση ακινήτων.
+            Από προσωπικές στιγμές μέχρι ταξιδιωτικές εικόνες και events, κάθε λήψη γίνεται μέρος μιας αφήγησης που μπορείς να μοιραστείς.
           </p>
         </div>
 

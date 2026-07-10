@@ -11,7 +11,7 @@ export default function Intro() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.7 }}
         >
-          Από ψηλά
+          Από άλλη γωνία
         </motion.p>
         <motion.h2
           className="text-balance font-[var(--font-manrope)] text-[clamp(2.7rem,6vw,7rem)] font-extrabold leading-[0.96] tracking-normal"
@@ -20,7 +20,7 @@ export default function Intro() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          Καταγράφω τοπία, ακτές και μοναδικές στιγμές από ψηλά, δημιουργώντας εικόνες και βίντεο με κινηματογραφική αισθητική.
+          Κάθε τοπίο έχει μια ιστορία. Ας τη φτιάξουμε από ψηλά, με εικόνες καθαρές, προσωπικές και κινηματογραφικές.
         </motion.h2>
       </div>
     </section>

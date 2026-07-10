@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 const navItems = [
   { label: "Αρχική", href: "#home" },
-  { label: "Έργα", href: "#projects" },
-  { label: "Υπηρεσίες", href: "#services" },
-  { label: "Ασφάλεια", href: "#safety" },
+  { label: "Ιστορίες", href: "#projects" },
+  { label: "Αφήγηση", href: "#services" },
+  { label: "Πτήση", href: "#safety" },
   { label: "Επικοινωνία", href: "#contact" }
 ];
 
@@ -18,7 +18,7 @@ export default function Header() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6">
         <a href="#home" className="font-semibold uppercase tracking-[0.28em]">
-          Εναέρια Οπτική
+          Drone Stories
         </a>
         <div className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => (
@@ -31,7 +31,7 @@ export default function Header() {
           href="#contact"
           className="rounded-full border border-[#f5f2ea]/20 px-4 py-2 text-xs uppercase tracking-[0.2em] transition hover:border-[#17d7d0] hover:text-[#17d7d0]"
         >
-          Πτήση
+          Ιστορία
         </a>
       </nav>
     </motion.header>

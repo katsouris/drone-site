@@ -46,9 +46,9 @@ export default function HorizontalProjects({ projects }: HorizontalProjectsProps
   return (
     <section ref={sectionRef} className="relative min-h-screen overflow-hidden bg-[#071012] py-16">
       <div className="px-5 md:px-8">
-        <p className="mb-4 text-sm uppercase tracking-[0.36em] text-[#17d7d0]">Οριζόντια διαδρομή</p>
+        <p className="mb-4 text-sm uppercase tracking-[0.36em] text-[#17d7d0]">Διαδρομές</p>
         <h2 className="max-w-5xl font-[var(--font-manrope)] text-[clamp(2.4rem,8vw,10vh)] font-extrabold uppercase leading-[0.88]">
-          Πτήσεις που ανοίγουν τον χώρο
+          Ο κόσμος σου από άλλη γωνία
         </h2>
       </div>
 
@@ -59,7 +59,7 @@ export default function HorizontalProjects({ projects }: HorizontalProjectsProps
               src={project.image}
               srcSet={project.imageSrcSet}
               sizes="(min-width: 768px) 58vw, 82vw"
-              alt={`Οριζόντια παρουσίαση ${project.title}`}
+              alt={`Εναέρια αφήγηση ${project.title}`}
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#050607]/92 via-transparent to-transparent" />

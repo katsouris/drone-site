@@ -11,12 +11,12 @@ export default function Safety() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="mb-5 text-sm uppercase tracking-[0.36em] text-[#17d7d0]">Ασφάλεια</p>
+          <p className="mb-5 text-sm uppercase tracking-[0.36em] text-[#17d7d0]">Πτήση με σεβασμό</p>
           <h2 className="mb-8 font-[var(--font-manrope)] text-[clamp(3rem,8vw,8rem)] font-extrabold uppercase leading-[0.86]">
-            Πτήση με ευθύνη
+            Ήρεμα. Καθαρά. Υπεύθυνα.
           </h2>
           <p className="max-w-3xl text-2xl leading-10 text-[#f5f2ea]/76">
-            Οι πτήσεις πραγματοποιούνται με σεβασμό στην ασφάλεια, την ιδιωτικότητα και τους ισχύοντες κανονισμούς.
+            Η εικόνα έχει αξία όταν δημιουργείται σωστά. Κάθε πτήση γίνεται με προσοχή στον χώρο, στους ανθρώπους και στη στιγμή.
           </p>
         </motion.div>
 

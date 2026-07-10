@@ -21,7 +21,7 @@ export default function Hero() {
           src={heroImage1920}
           srcSet={`${heroImage800} 800w, ${heroImage1280} 1280w, ${heroImage1920} 1920w`}
           sizes='100vw'
-          alt='Εναέρια λήψη ελληνικού τοπίου'
+          alt='Εναέρια λήψη τοπίου με κινηματογραφική αίσθηση'
           className='h-full w-full object-cover'
         />
       </motion.div>
@@ -39,15 +39,15 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.05 }}
           >
-            Εναέριο portfolio
+            Drone storytelling
           </motion.p>
           <motion.h1
-            className='max-w-5xl text-balance font-[var(--font-manrope)] text-[clamp(4rem,13vw,13.5rem)] font-extrabold uppercase leading-[0.78] tracking-normal'
+            className='max-w-5xl text-balance font-[var(--font-manrope)] text-[clamp(3.2rem,9vw,9.8rem)] font-extrabold uppercase leading-[0.78] tracking-normal'
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.65 }}
           >
-            Εναέρια Οπτική
+            Φτιάξε τη δική σου ιστορία
           </motion.h1>
         </div>
 
@@ -58,13 +58,13 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.2 }}
         >
           <p className='mb-7 text-lg leading-7 text-[#f5f2ea]/82'>
-            Drone φωτογραφία και cinematic βίντεο από την Ελλάδα
+            Φτιάξε τη δική σου ιστορία μέσα από εικόνες που μένουν.
           </p>
           <a
             href='#projects'
-            className='inline-flex items-center gap-3 rounded-full bg-[#f5f2ea] px-6 py-3 text-sm font-semibold text-[#061012] transition hover:bg-[#17d7d0]'
+            className='inline-flex items-center gap-3 rounded-full bg-[#d8d2c4] px-6 py-3 text-sm font-semibold text-[#061012] transition hover:bg-[#17d7d0]'
           >
-            Δες τα έργα μου
+            Δες τις ιστορίες
             <span aria-hidden='true'>↓</span>
           </a>
         </motion.div>
