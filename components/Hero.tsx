@@ -23,7 +23,7 @@ export default function Hero() {
           alt='Εναέρια λήψη ελληνικού τοπίου'
           fill
           priority
-          className='object-fill'
+          className='object-cover'
           sizes='100vw'
         />
       </motion.div>
