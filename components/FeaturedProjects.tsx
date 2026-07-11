@@ -11,12 +11,12 @@ export default function FeaturedProjects({ videos }: FeaturedProjectsProps) {
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="mb-4 text-sm uppercase tracking-[0.36em] text-[#17d7d0]">Επιλεγμένες ιστορίες</p>
-            <h2 className="font-[var(--font-manrope)] text-[clamp(3rem,8vw,8.5rem)] font-extrabold uppercase leading-[0.86]">
+            <p className="mb-4 text-xs uppercase tracking-[0.24em] text-[#17d7d0] md:text-sm md:tracking-[0.36em]">Επιλεγμένες ιστορίες</p>
+            <h2 className="font-[var(--font-manrope)] text-[clamp(2.5rem,11vw,3.75rem)] font-extrabold uppercase leading-[0.9] md:text-[clamp(3rem,8vw,8.5rem)] md:leading-[0.86]">
               Στιγμές από ψηλά
             </h2>
           </div>
-          <p className="max-w-md text-lg leading-8 text-[#f5f2ea]/66">
+          <p className="max-w-md text-base leading-7 text-[#f5f2ea]/66 md:text-lg md:leading-8">
             Κάθε πτήση είναι μια μικρή σκηνή: φως, κίνηση και απόσταση που δίνουν χώρο στην ιστορία σου.
           </p>
         </div>
@@ -44,11 +44,11 @@ export default function FeaturedProjects({ videos }: FeaturedProjectsProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050607] via-[#050607]/20 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-                <div className="mb-5 flex items-center justify-between text-sm text-[#f5f2ea]/66">
+                <div className="mb-5 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm text-[#f5f2ea]/66">
                   <span>{video.number}</span>
                   <span>{video.location}</span>
                 </div>
-                <h3 className="mb-3 font-[var(--font-manrope)] text-4xl font-extrabold uppercase md:text-6xl">{video.title}</h3>
+                <h3 className="mb-3 font-[var(--font-manrope)] text-3xl font-extrabold uppercase leading-[0.9] md:text-6xl">{video.title}</h3>
                 <p className="max-w-xl text-base leading-7 text-[#f5f2ea]/74">{video.description}</p>
               </div>
             </motion.article>

@@ -22,15 +22,15 @@ export default function HorizontalProjects({ projects }: HorizontalProjectsProps
     }
 
     const context = gsap.context(() => {
-      const distance = track.scrollWidth - window.innerWidth;
+      const getDistance = () => Math.max(0, track.scrollWidth - window.innerWidth);
 
       gsap.to(track, {
-        x: -distance,
+        x: () => -getDistance(),
         ease: "none",
         scrollTrigger: {
           trigger: section,
           start: "top top",
-          end: () => `+=${distance}`,
+          end: () => `+=${getDistance()}`,
           scrub: 1,
           pin: true,
           invalidateOnRefresh: true
@@ -46,8 +46,8 @@ export default function HorizontalProjects({ projects }: HorizontalProjectsProps
   return (
     <section ref={sectionRef} className="relative min-h-screen overflow-hidden bg-[#071012] py-16">
       <div className="px-5 md:px-8">
-        <p className="mb-4 text-sm uppercase tracking-[0.36em] text-[#17d7d0]">Διαδρομές</p>
-        <h2 className="max-w-5xl font-[var(--font-manrope)] text-[clamp(2.4rem,8vw,10vh)] font-extrabold uppercase leading-[0.88]">
+        <p className="mb-4 text-xs uppercase tracking-[0.24em] text-[#17d7d0] md:text-sm md:tracking-[0.36em]">Διαδρομές</p>
+        <h2 className="max-w-5xl font-[var(--font-manrope)] text-[clamp(2.25rem,10vw,3.25rem)] font-extrabold uppercase leading-[0.92] md:text-[clamp(2.4rem,8vw,10vh)] md:leading-[0.88]">
           Ο κόσμος σου από άλλη γωνία
         </h2>
       </div>

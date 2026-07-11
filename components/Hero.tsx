@@ -34,7 +34,7 @@ export default function Hero() {
       >
         <div>
           <motion.p
-            className='mb-5 text-sm uppercase tracking-[0.42em] text-[#17d7d0]'
+            className='mb-5 text-xs uppercase tracking-[0.28em] text-[#17d7d0] md:text-sm md:tracking-[0.42em]'
             initial={{ y: 28, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.05 }}
@@ -42,7 +42,7 @@ export default function Hero() {
             Drone storytelling
           </motion.p>
           <motion.h1
-            className='max-w-5xl text-balance font-[var(--font-manrope)] text-[clamp(3.2rem,9vw,9.8rem)] font-extrabold uppercase leading-[0.78] tracking-normal'
+            className='max-w-5xl text-balance font-[var(--font-manrope)] text-[clamp(2.75rem,12vw,4.25rem)] font-extrabold uppercase leading-[0.84] tracking-normal md:text-[clamp(3.2rem,9vw,9.8rem)] md:leading-[0.78]'
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.65 }}
@@ -57,7 +57,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
-          <p className='mb-7 text-lg leading-7 text-[#f5f2ea]/82'>
+          <p className='mb-7 text-base leading-7 text-[#f5f2ea]/82 md:text-lg'>
             Φτιάξε τη δική σου ιστορία μέσα από εικόνες που μένουν.
           </p>
           <a

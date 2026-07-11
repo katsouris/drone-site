@@ -11,11 +11,11 @@ export default function Safety() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="mb-5 text-sm uppercase tracking-[0.36em] text-[#17d7d0]">Πτήση με σεβασμό</p>
-          <h2 className="mb-8 font-[var(--font-manrope)] text-[clamp(3rem,8vw,8rem)] font-extrabold uppercase leading-[0.86]">
+          <p className="mb-5 text-xs uppercase tracking-[0.24em] text-[#17d7d0] md:text-sm md:tracking-[0.36em]">Πτήση με σεβασμό</p>
+          <h2 className="mb-8 font-[var(--font-manrope)] text-[clamp(2.5rem,11vw,3.75rem)] font-extrabold uppercase leading-[0.9] md:text-[clamp(3rem,8vw,8rem)] md:leading-[0.86]">
             Ήρεμα. Καθαρά. Υπεύθυνα.
           </h2>
-          <p className="max-w-3xl text-2xl leading-10 text-[#f5f2ea]/76">
+          <p className="max-w-3xl text-lg leading-8 text-[#f5f2ea]/76 md:text-2xl md:leading-10">
             Η εικόνα έχει αξία όταν δημιουργείται σωστά. Κάθε πτήση γίνεται με προσοχή στον χώρο, στους ανθρώπους και στη στιγμή.
           </p>
         </motion.div>
@@ -31,7 +31,7 @@ export default function Safety() {
               transition={{ duration: 0.6, delay: index * 0.08 }}
             >
               <span className="text-[#17d7d0]">{String(index + 1).padStart(2, "0")}</span>
-              <p className="text-xl text-[#f5f2ea]/82">{item}</p>
+              <p className="text-base leading-7 text-[#f5f2ea]/82 md:text-xl">{item}</p>
             </motion.div>
           ))}
         </div>

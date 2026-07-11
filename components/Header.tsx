@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const navItems = [
   { label: "Αρχική", href: "#home" },
@@ -9,6 +10,8 @@ const navItems = [
 ];
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <motion.header
       className="fixed left-0 top-0 z-40 w-full px-5 py-5 text-sm text-[#f5f2ea] md:px-8"
@@ -29,11 +32,37 @@ export default function Header() {
         </div>
         <a
           href="#contact"
-          className="rounded-full border border-[#f5f2ea]/20 px-4 py-2 text-xs uppercase tracking-[0.2em] transition hover:border-[#17d7d0] hover:text-[#17d7d0]"
+          className="hidden rounded-full border border-[#f5f2ea]/20 px-4 py-2 text-xs uppercase tracking-[0.2em] transition hover:border-[#17d7d0] hover:text-[#17d7d0] md:inline-flex"
         >
           Ιστορία
         </a>
+        <button
+          className="mr-3 rounded-full border border-[#f5f2ea]/20 px-4 py-2 text-xs uppercase tracking-[0.2em] transition hover:border-[#17d7d0] hover:text-[#17d7d0] md:hidden"
+          type="button"
+          aria-controls="mobile-navigation"
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
+        >
+          Μενού
+        </button>
       </nav>
+      <div
+        id="mobile-navigation"
+        className={`mx-auto mt-3 max-w-7xl border border-[#f5f2ea]/15 bg-[#050607]/95 p-5 backdrop-blur md:hidden ${isMenuOpen ? "block" : "hidden"}`}
+      >
+        <div className="grid gap-1">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="border-b border-[#f5f2ea]/10 py-3 text-base text-[#f5f2ea]/82 transition hover:text-[#17d7d0]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </div>
     </motion.header>
   );
 }

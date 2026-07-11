@@ -6,10 +6,10 @@ export default function Services() {
     <section id="services" className="bg-[#f5f2ea] px-5 py-28 text-[#071012] md:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 grid gap-6 md:grid-cols-[0.7fr_1fr] md:items-end">
-          <h2 className="font-[var(--font-manrope)] text-[clamp(3.2rem,8vw,8rem)] font-extrabold uppercase leading-[0.86]">
+          <h2 className="font-[var(--font-manrope)] text-[clamp(2.5rem,11vw,3.75rem)] font-extrabold uppercase leading-[0.9] md:text-[clamp(3.2rem,8vw,8rem)] md:leading-[0.86]">
             Τρόποι αφήγησης
           </h2>
-          <p className="max-w-xl text-lg leading-8 text-[#071012]/68">
+          <p className="max-w-xl text-base leading-7 text-[#071012]/68 md:text-lg md:leading-8">
             Από προσωπικές στιγμές μέχρι ταξιδιωτικές εικόνες και events, κάθε λήψη γίνεται μέρος μιας αφήγησης που μπορείς να μοιραστείς.
           </p>
         </div>
@@ -24,8 +24,8 @@ export default function Services() {
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, delay: index * 0.06 }}
             >
-              <span className="mb-12 block text-sm text-[#087c80] group-hover:text-[#17d7d0]">{String(index + 1).padStart(2, "0")}</span>
-              <h3 className="text-2xl font-semibold leading-tight">{service}</h3>
+              <span className="mb-12 block text-xs text-[#087c80] group-hover:text-[#17d7d0] md:text-sm">{String(index + 1).padStart(2, "0")}</span>
+              <h3 className="text-xl font-semibold leading-tight md:text-2xl">{service}</h3>
             </motion.article>
           ))}
         </div>
