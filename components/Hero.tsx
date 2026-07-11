@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id='home'
-      className='relative flex min-h-screen items-end overflow-hidden px-5 pb-12 pt-32 md:px-8 md:pb-16'
+      className='relative flex min-h-screen items-end overflow-hidden bg-[#020405] px-5 pb-12 pt-32 md:px-8 md:pb-16'
     >
       <motion.div
         className='absolute inset-0 bg-[#050607]'
