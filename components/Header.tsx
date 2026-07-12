@@ -85,7 +85,8 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="border-b border-[#f5f2ea]/10 py-3 text-base text-[#f5f2ea]/82 transition hover:text-[#17d7d0]"
+              className="border-b border-[#f5f2ea]/10 py-3 text-base"
+              style={{ color: "#ffffff" }}
               onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
