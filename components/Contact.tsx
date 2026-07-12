@@ -1,6 +1,28 @@
 import { motion } from "framer-motion";
+import { useState, type FormEvent } from "react";
 
 export default function Contact() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitted(false);
+
+    const form = event.currentTarget;
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      form.reset();
+      setIsSubmitted(true);
+    }
+  };
+
   return (
     <section id="contact" className="bg-[#f5f2ea] px-5 py-28 text-[#071012] md:px-8">
       <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[1fr_0.72fr]">
@@ -25,22 +47,27 @@ export default function Contact() {
           </div>
         </div>
 
-        <form className="space-y-4">
+        <form action="https://formspree.io/f/xqerzyvj" method="POST" className="space-y-4" onSubmit={handleSubmit}>
           <label className="block">
             <span className="mb-2 block text-sm uppercase tracking-[0.2em] text-[#071012]/60">Όνομα</span>
-            <input className="w-full border border-[#071012]/18 bg-transparent px-4 py-4 text-base outline-none transition focus:border-[#087c80]" name="name" />
+            <input className="w-full border border-[#071012]/18 bg-transparent px-4 py-4 text-base outline-none transition focus:border-[#087c80]" name="name" required />
           </label>
           <label className="block">
             <span className="mb-2 block text-sm uppercase tracking-[0.2em] text-[#071012]/60">Email</span>
-            <input className="w-full border border-[#071012]/18 bg-transparent px-4 py-4 text-base outline-none transition focus:border-[#087c80]" type="email" name="email" />
+            <input className="w-full border border-[#071012]/18 bg-transparent px-4 py-4 text-base outline-none transition focus:border-[#087c80]" type="email" name="email" required />
           </label>
           <label className="block">
             <span className="mb-2 block text-sm uppercase tracking-[0.2em] text-[#071012]/60">Η ιστορία σου</span>
-            <textarea className="min-h-36 w-full resize-y border border-[#071012]/18 bg-transparent px-4 py-4 text-base outline-none transition focus:border-[#087c80]" name="message" />
+            <textarea className="min-h-36 w-full resize-y border border-[#071012]/18 bg-transparent px-4 py-4 text-base outline-none transition focus:border-[#087c80]" name="message" required />
           </label>
           <button className="w-full bg-[#071012] px-6 py-4 font-semibold text-[#f5f2ea] transition hover:bg-[#087c80]" type="submit">
             Ας τη δημιουργήσουμε μαζί
           </button>
+          {isSubmitted && (
+            <p className="text-center text-sm text-[#087c80]" role="status">
+              Σας ευχαριστώ! Θα επικοινωνήσω σύντομα μαζί σας.
+            </p>
+          )}
         </form>
       </div>
     </section>
