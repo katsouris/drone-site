@@ -39,7 +39,7 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.05 }}
           >
-            Drone storytelling
+            Ιστορίες από ψηλά
           </motion.p>
           <motion.h1
             className='max-w-5xl text-balance font-[var(--font-manrope)] text-[clamp(2.75rem,12vw,4.25rem)] font-extrabold uppercase leading-[0.84] tracking-normal md:text-[clamp(3.2rem,9vw,9.8rem)] md:leading-[0.78]'
@@ -58,13 +58,13 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.2 }}
         >
           <p className='mb-7 text-base leading-7 text-[#f5f2ea]/82 md:text-lg'>
-            Φτιάξε τη δική σου ιστορία μέσα από εικόνες που μένουν.
+            Κράτησε τη στιγμή ζωντανή, μέσα από εικόνες που αφηγούνται όσα ένιωσες.
           </p>
           <a
             href='#projects'
             className='inline-flex items-center gap-3 rounded-full bg-[#d8d2c4] px-6 py-3 text-sm font-semibold text-[#061012] transition hover:bg-[#17d7d0]'
           >
-            Δες τις ιστορίες
+            Ανακάλυψε τις ιστορίες
             <span aria-hidden='true'>↓</span>
           </a>
         </motion.div>

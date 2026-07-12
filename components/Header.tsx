@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navItems = [
   { label: "Αρχική", href: "#home" },
@@ -11,10 +11,36 @@ const navItems = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOverLightSection, setIsOverLightSection] = useState(false);
+
+  useEffect(() => {
+    const updateHeaderColor = () => {
+      const headerPosition = 32;
+      const sections = document.querySelectorAll<HTMLElement>("main > section");
+      const currentSection = Array.from(sections).find((section) => {
+        const bounds = section.getBoundingClientRect();
+
+        return bounds.top <= headerPosition && bounds.bottom > headerPosition;
+      });
+
+      setIsOverLightSection(
+        currentSection !== undefined && getComputedStyle(currentSection).backgroundColor === "rgb(245, 242, 234)"
+      );
+    };
+
+    updateHeaderColor();
+    window.addEventListener("scroll", updateHeaderColor, { passive: true });
+    window.addEventListener("resize", updateHeaderColor);
+
+    return () => {
+      window.removeEventListener("scroll", updateHeaderColor);
+      window.removeEventListener("resize", updateHeaderColor);
+    };
+  }, []);
 
   return (
     <motion.header
-      className="fixed left-0 top-0 z-40 w-full px-5 py-5 text-sm text-[#f5f2ea] md:px-8"
+      className={`fixed left-0 top-0 z-40 w-full px-5 py-5 text-sm transition-colors md:px-8 ${isOverLightSection ? "text-[#050607]" : "text-[#f5f2ea]"}`}
       initial={{ y: -28, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.75, delay: 1 }}
@@ -25,19 +51,23 @@ export default function Header() {
         </a>
         <div className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="text-[#f5f2ea]/72 transition hover:text-[#17d7d0]">
+            <a
+              key={item.href}
+              href={item.href}
+              className={`${isOverLightSection ? "text-[#050607]/72" : "text-[#f5f2ea]/72"} transition hover:text-[#17d7d0]`}
+            >
               {item.label}
             </a>
           ))}
         </div>
         <a
           href="#contact"
-          className="hidden rounded-full border border-[#f5f2ea]/20 px-4 py-2 text-xs uppercase tracking-[0.2em] transition hover:border-[#17d7d0] hover:text-[#17d7d0] md:inline-flex"
+          className={`hidden rounded-full border px-4 py-2 text-xs uppercase tracking-[0.2em] transition hover:border-[#17d7d0] hover:text-[#17d7d0] md:inline-flex ${isOverLightSection ? "border-[#050607]/20" : "border-[#f5f2ea]/20"}`}
         >
           Ιστορία
         </a>
         <button
-          className="mr-3 rounded-full border border-[#f5f2ea]/20 px-4 py-2 text-xs uppercase tracking-[0.2em] transition hover:border-[#17d7d0] hover:text-[#17d7d0] md:hidden"
+          className={`mr-3 rounded-full border px-4 py-2 text-xs uppercase tracking-[0.2em] transition hover:border-[#17d7d0] hover:text-[#17d7d0] md:hidden ${isOverLightSection ? "border-[#050607]/20" : "border-[#f5f2ea]/20"}`}
           type="button"
           aria-controls="mobile-navigation"
           aria-expanded={isMenuOpen}

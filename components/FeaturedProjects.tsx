@@ -17,7 +17,7 @@ export default function FeaturedProjects({ videos }: FeaturedProjectsProps) {
             </h2>
           </div>
           <p className="max-w-md text-base leading-7 text-[#f5f2ea]/66 md:text-lg md:leading-8">
-            Κάθε πτήση είναι μια μικρή σκηνή: φως, κίνηση και απόσταση που δίνουν χώρο στην ιστορία σου.
+            Κάθε πτήση κρατά κάτι από τη στιγμή: το φως, την κίνηση και την ατμόσφαιρα που θέλεις να θυμάσαι.
           </p>
         </div>
 
